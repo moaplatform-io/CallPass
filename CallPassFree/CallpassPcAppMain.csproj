@@ -1,0 +1,694 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3673C605-DDB1-4F8C-93C8-9B1BA6FC28E1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Kons.ShopCallpass</RootNamespace>
+    <AssemblyName>Kons.ShopCallpass</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+    <PublishUrl>게시\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\app_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v18.1, Version=18.1.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Data.v18.1, Version=18.1.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v18.1.Core, Version=18.1.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v18.1.Core, Version=18.1.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v18.1, Version=18.1.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v18.1, Version=18.1.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v18.1, Version=18.1.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v18.1, Version=18.1.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v18.1, Version=18.1.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v18.1, Version=18.1.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v18.1, Version=18.1.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v18.1, Version=18.1.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="IKVM.AWT.WinForms, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.AWT.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Beans, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Beans.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Charsets, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Charsets.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Cldrdata, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Cldrdata.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Corba, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Corba.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Core, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Jdbc, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Jdbc.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Localedata, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Localedata.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Management, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Management.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Media, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Media.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Misc, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Misc.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Naming, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Naming.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Nashorn, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Nashorn.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Remoting, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Remoting.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Security, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.SwingAWT, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.SwingAWT.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Text, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Text.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Tools, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Tools.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Util, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.API, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.XML.API.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.Bind, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.XML.Bind.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.Crypto, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.XML.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.Parse, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.XML.Parse.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.Transform, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.XML.Transform.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.WebServices, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.XML.WebServices.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.XPath, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.XML.XPath.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.Runtime, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.Runtime.JNI, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.Runtime.JNI.dll</HintPath>
+    </Reference>
+    <Reference Include="Kons.TsLibraryDLL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalLibrary\Kons.TsLibraryDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.9.12\lib\net40\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalLibrary\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <HintPath>..\packages\SSH.NET.2016.1.0\lib\net40\Renci.SshNet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net.Json">
+      <HintPath>..\..\..\..\..\Downloads\json-for-dotnet-1.2\System.Net.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppMain\AppCore.cs" />
+    <Compile Include="AppMain\AppDefine.cs" />
+    <Compile Include="AppMain\AppDoc.cs" />
+    <Compile Include="AppMain\AppUtil.cs" />
+    <Compile Include="FormDialog\FormDlgConfigManual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDialog\FormDlgConfigManual.Designer.cs">
+      <DependentUpon>FormDlgConfigManual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDialog\FormDlgConfigParseSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDialog\FormDlgConfigParseSetting.Designer.cs">
+      <DependentUpon>FormDlgConfigParseSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDialog\FormApiDeliveryOrderList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDialog\FormApiDeliveryOrderList.Designer.cs">
+      <DependentUpon>FormApiDeliveryOrderList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Object\ObjApiDeliveryOrder.cs" />
+    <Compile Include="Object\ObjApiReqStoreDelResult.cs" />
+    <Compile Include="Controller\ControllerOrderInput.cs" />
+    <Compile Include="Controller\SerialPortOrderInput.cs" />
+    <Compile Include="Controller\SerialPortPrintOutput.cs" />
+    <Compile Include="FileDatabase\MyFileDbConnectionCallpass.cs" />
+    <Compile Include="FormDialog\FormDlgBaseEmptySample.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDialog\FormDlgBaseEmptySample.Designer.cs">
+      <DependentUpon>FormDlgBaseEmptySample.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDialog\FormComportParsingTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDialog\FormComportParsingTest.Designer.cs">
+      <DependentUpon>FormComportParsingTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDialog\FormDlgBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDialog\FormDlgBase.Designer.cs">
+      <DependentUpon>FormDlgBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDialog\FormDlgConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDialog\FormDlgConfig.Designer.cs">
+      <DependentUpon>FormDlgConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDialog\FormDlgConfigRunningEtc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDialog\FormDlgConfigRunningEtc.Designer.cs">
+      <DependentUpon>FormDlgConfigRunningEtc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDialog\FormDlgConfigOrderInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDialog\FormDlgConfigOrderInput.Designer.cs">
+      <DependentUpon>FormDlgConfigOrderInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDialog\FormDlgConfigPrintOutput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDialog\FormDlgConfigPrintOutput.Designer.cs">
+      <DependentUpon>FormDlgConfigPrintOutput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDialog\FormDlgOrderDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDialog\FormDlgOrderDetail.Designer.cs">
+      <DependentUpon>FormDlgOrderDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDialog\FormDlgUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDialog\FormDlgUpdate.Designer.cs">
+      <DependentUpon>FormDlgUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDialog\FormStoreInfoSelecter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDialog\FormStoreInfoSelecter.Designer.cs">
+      <DependentUpon>FormStoreInfoSelecter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPopup\FormPopupNotify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPopup\FormPopupNotify.Designer.cs">
+      <DependentUpon>FormPopupNotify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPopup\FormPopupProgramInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPopup\FormPopupProgramInfo.Designer.cs">
+      <DependentUpon>FormPopupProgramInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormView\FormViewBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormView\FormViewBase.Designer.cs">
+      <DependentUpon>FormViewBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormView\FormViewOrderList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormView\FormViewOrderList.Designer.cs">
+      <DependentUpon>FormViewOrderList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileDatabase\FileDbConnectionBase.cs" />
+    <Compile Include="FileDatabase\FileDbConnectionSqlite.cs" />
+    <Compile Include="Object\ObjApiReqDeliveryCost.cs" />
+    <Compile Include="Object\ObjApiReqDeliveryDalrigo.cs" />
+    <Compile Include="Object\ObjConfigLastDeliveryRequestInfo.cs" />
+    <Compile Include="Object\ObjConfigRunningEtc.cs" />
+    <Compile Include="Object\ObjConfigStoreApiInfo.cs" />
+    <Compile Include="Object\ObjConfigStoreApiRegInfo.cs" />
+    <Compile Include="Object\ObjLastLoginUserInfo.cs" />
+    <Compile Include="Object\ObjApiReqDeliveryResult.cs" />
+    <Compile Include="Object\ObjOrderInputSerialRawDataBuf.cs" />
+    <Compile Include="Object\PoolConfigOrderInput.cs" />
+    <Compile Include="Object\PoolConfigPrintOutput.cs" />
+    <Compile Include="Parser\ParserOrderInputBase.cs" />
+    <Compile Include="Model\ModelFileDatabase.cs" />
+    <Compile Include="Model\ModelAppDevice.cs" />
+    <Compile Include="Parser\ParserOrderInputCommon.cs" />
+    <Compile Include="Utility\KnNotify.cs" />
+    <Compile Include="Object\ObjConfigOrderInput.cs" />
+    <Compile Include="Object\ObjConfigPrintOutput.cs" />
+    <Compile Include="Object\ObjLoginUser.cs" />
+    <Compile Include="Object\ObjMainWndOrderReport.cs" />
+    <Compile Include="Object\ObjOrder.cs" />
+    <Compile Include="Object\ObjProcedureResult.cs" />
+    <Compile Include="Object\ObjPrinterSerialRawDataBuf.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility\IKnRecycleObj.cs" />
+    <Compile Include="Utility\KnDegine.cs" />
+    <Compile Include="Utility\KnDevexpressFunc.cs" />
+    <Compile Include="Utility\KnFormWaitCursors.cs" />
+    <Compile Include="Utility\KnPool.cs" />
+    <Compile Include="Utility\KnPooledList.cs" />
+    <Compile Include="Utility\KnPooledQueue.cs" />
+    <Compile Include="Utility\KnUtil.cs" />
+    <Compile Include="Utility\Utility.cs" />
+    <EmbeddedResource Include="FormDialog\FormDlgConfigManual.resx">
+      <DependentUpon>FormDlgConfigManual.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDialog\FormDlgConfigParseSetting.resx">
+      <DependentUpon>FormDlgConfigParseSetting.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDialog\FormApiDeliveryOrderList.resx">
+      <DependentUpon>FormApiDeliveryOrderList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDialog\FormDlgBase.resx">
+      <DependentUpon>FormDlgBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDialog\FormDlgBaseEmptySample.resx">
+      <DependentUpon>FormDlgBaseEmptySample.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDialog\FormComportParsingTest.resx">
+      <DependentUpon>FormComportParsingTest.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDialog\FormDlgConfig.resx">
+      <DependentUpon>FormDlgConfig.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDialog\FormDlgConfigRunningEtc.resx">
+      <DependentUpon>FormDlgConfigRunningEtc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDialog\FormDlgConfigOrderInput.resx">
+      <DependentUpon>FormDlgConfigOrderInput.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDialog\FormDlgConfigPrintOutput.resx">
+      <DependentUpon>FormDlgConfigPrintOutput.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDialog\FormDlgOrderDetail.resx">
+      <DependentUpon>FormDlgOrderDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDialog\FormDlgUpdate.resx">
+      <DependentUpon>FormDlgUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDialog\FormStoreInfoSelecter.resx">
+      <DependentUpon>FormStoreInfoSelecter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPopup\FormPopupNotify.resx">
+      <DependentUpon>FormPopupNotify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPopup\FormPopupProgramInfo.resx">
+      <DependentUpon>FormPopupProgramInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormView\FormViewOrderList.resx">
+      <DependentUpon>FormViewOrderList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\announcement_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up2_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\order_state_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\order_state_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\order_state_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\order_state_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\order_state_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\order_state_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\order_state_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\order_state_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\order_state_9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\order_state_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bopermission_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkbuttons_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\insertcomment_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttoxls_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zoom_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zoom_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clearfilter_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boproductgroup_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkbox_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comment_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\properties_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reset_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\selectall_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\selectall_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\showall_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\technology_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addheader_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\moa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\knowledgebasearticle_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\groupfieldcollection_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\app_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Sync_Center_99944.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Sync_Center_98003.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_exclamation-circle_yellow_69299.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Sync_Center_99944_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Sync_Center_99944_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Sync_Center_99944_128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Sync_Center_99944_b_128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Sync_Center_99944_b_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Sync_Center_99944_b_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apply_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apply_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apply_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\support_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\information_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\viewsetting_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img01.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img02.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img03.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\richeditpageorientation_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employees_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newemployee_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employees_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employeewelcome_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assigntome_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assigntome_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login_bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bike_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2%28x86 및 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Shell32">
+      <Guid>{50A7E9B0-70EF-11D1-B75A-00A0C90564FE}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

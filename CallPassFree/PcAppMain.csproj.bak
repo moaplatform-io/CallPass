@@ -1,0 +1,541 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3673C605-DDB1-4F8C-93C8-9B1BA6FC28E1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Kons.ShopCallpass</RootNamespace>
+    <AssemblyName>Kons.ShopCallpass</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\app_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v18.1, Version=18.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Data.v18.1, Version=18.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v18.1.Core, Version=18.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v18.1.Core, Version=18.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v18.1, Version=18.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v18.1, Version=18.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v18.1, Version=18.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v18.1, Version=18.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v18.1, Version=18.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v18.1, Version=18.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v18.1, Version=18.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v18.1, Version=18.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Kons.TsLibraryDLL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalLibrary\Kons.TsLibraryDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppMain\AppCore.cs" />
+    <Compile Include="AppMain\AppDefine.cs" />
+    <Compile Include="AppMain\AppDoc.cs" />
+    <Compile Include="AppMain\AppUtil.cs" />
+    <Compile Include="FormDialog\FormApiDeliveryOrderList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDialog\FormApiDeliveryOrderList.Designer.cs">
+      <DependentUpon>FormApiDeliveryOrderList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Object\ObjApiDeliveryOrder.cs" />
+    <Compile Include="Object\ObjApiReqStoreDelResult.cs" />
+    <Compile Include="OpenApi\OpenApiDalrigo.cs" />
+    <Compile Include="OpenApi\OpenApiBase.cs" />
+    <Compile Include="Controller\ControllerOrderInput.cs" />
+    <Compile Include="OpenApi\OpenApiDalrigoV2.cs" />
+    <Compile Include="OpenApi\OpenApiSuperhero.cs" />
+    <Compile Include="Controller\SerialPortOrderInput.cs" />
+    <Compile Include="Controller\SerialPortPrintOutput.cs" />
+    <Compile Include="FileDatabase\MyFileDbConnectionCallpass.cs" />
+    <Compile Include="FormDialog\FormDlgBaseEmptySample.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDialog\FormDlgBaseEmptySample.Designer.cs">
+      <DependentUpon>FormDlgBaseEmptySample.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDialog\FormComportParsingTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDialog\FormComportParsingTest.Designer.cs">
+      <DependentUpon>FormComportParsingTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDialog\FormDlgBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDialog\FormDlgBase.Designer.cs">
+      <DependentUpon>FormDlgBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDialog\FormDlgConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDialog\FormDlgConfig.Designer.cs">
+      <DependentUpon>FormDlgConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDialog\FormDlgConfigRunningEtc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDialog\FormDlgConfigRunningEtc.Designer.cs">
+      <DependentUpon>FormDlgConfigRunningEtc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDialog\FormDlgConfigOrderInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDialog\FormDlgConfigOrderInput.Designer.cs">
+      <DependentUpon>FormDlgConfigOrderInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDialog\FormDlgConfigPrintOutput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDialog\FormDlgConfigPrintOutput.Designer.cs">
+      <DependentUpon>FormDlgConfigPrintOutput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDialog\FormDlgLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDialog\FormDlgLogin.Designer.cs">
+      <DependentUpon>FormDlgLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDialog\FormDlgOrderDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDialog\FormDlgOrderDetail.Designer.cs">
+      <DependentUpon>FormDlgOrderDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDialog\FormDlgRequestDelivery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDialog\FormDlgRequestDelivery.Designer.cs">
+      <DependentUpon>FormDlgRequestDelivery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDialog\FormDlgUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDialog\FormDlgUpdate.Designer.cs">
+      <DependentUpon>FormDlgUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDialog\FormStoreInfoSelecter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDialog\FormStoreInfoSelecter.Designer.cs">
+      <DependentUpon>FormStoreInfoSelecter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPopup\FormPopupNotify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPopup\FormPopupNotify.Designer.cs">
+      <DependentUpon>FormPopupNotify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPopup\FormPopupProgramInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPopup\FormPopupProgramInfo.Designer.cs">
+      <DependentUpon>FormPopupProgramInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormView\FormViewBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormView\FormViewBase.Designer.cs">
+      <DependentUpon>FormViewBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormView\FormViewOrderList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormView\FormViewOrderList.Designer.cs">
+      <DependentUpon>FormViewOrderList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileDatabase\FileDbConnectionBase.cs" />
+    <Compile Include="FileDatabase\FileDbConnectionSqlite.cs" />
+    <Compile Include="Object\ObjApiReqDeliveryCost.cs" />
+    <Compile Include="Object\ObjApiReqDeliveryDalrigo.cs" />
+    <Compile Include="Object\ObjConfigLastDeliveryRequestInfo.cs" />
+    <Compile Include="Object\ObjConfigRunningEtc.cs" />
+    <Compile Include="Object\ObjConfigStoreApiInfo.cs" />
+    <Compile Include="Object\ObjConfigStoreApiRegInfo.cs" />
+    <Compile Include="Object\ObjLastLoginUserInfo.cs" />
+    <Compile Include="Object\ObjApiReqDeliveryResult.cs" />
+    <Compile Include="Object\ObjOrderInputSerialRawDataBuf.cs" />
+    <Compile Include="Object\PoolConfigOrderInput.cs" />
+    <Compile Include="Object\PoolConfigPrintOutput.cs" />
+    <Compile Include="OpenApi\OpenApiSuperheroV2.cs" />
+    <Compile Include="Parser\ParserOrderInputBase.cs" />
+    <Compile Include="Parser\ParserOrderInputBaemin.cs" />
+    <Compile Include="Parser\ParserOrderInputDelgen.cs" />
+    <Compile Include="Model\ModelFileDatabase.cs" />
+    <Compile Include="Model\ModelAppDevice.cs" />
+    <Compile Include="Utility\KnNotify.cs" />
+    <Compile Include="Object\ObjConfigOrderInput.cs" />
+    <Compile Include="Object\ObjConfigPrintOutput.cs" />
+    <Compile Include="Object\ObjLoginUser.cs" />
+    <Compile Include="Object\ObjMainWndOrderReport.cs" />
+    <Compile Include="Object\ObjOrder.cs" />
+    <Compile Include="Object\ObjProcedureResult.cs" />
+    <Compile Include="Object\ObjPrinterSerialRawDataBuf.cs" />
+    <Compile Include="Parser\ParserOrderInputOkPos.cs" />
+    <Compile Include="Parser\ParserOrderInputPosfeed.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility\IKnRecycleObj.cs" />
+    <Compile Include="Utility\KnDegine.cs" />
+    <Compile Include="Utility\KnDevexpressFunc.cs" />
+    <Compile Include="Utility\KnFormWaitCursors.cs" />
+    <Compile Include="Utility\KnPool.cs" />
+    <Compile Include="Utility\KnPooledList.cs" />
+    <Compile Include="Utility\KnPooledQueue.cs" />
+    <Compile Include="Utility\KnUtil.cs" />
+    <EmbeddedResource Include="FormDialog\FormApiDeliveryOrderList.resx">
+      <DependentUpon>FormApiDeliveryOrderList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDialog\FormDlgBase.resx">
+      <DependentUpon>FormDlgBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDialog\FormDlgBaseEmptySample.resx">
+      <DependentUpon>FormDlgBaseEmptySample.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDialog\FormComportParsingTest.resx">
+      <DependentUpon>FormComportParsingTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDialog\FormDlgConfig.resx">
+      <DependentUpon>FormDlgConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDialog\FormDlgConfigRunningEtc.resx">
+      <DependentUpon>FormDlgConfigRunningEtc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDialog\FormDlgConfigOrderInput.resx">
+      <DependentUpon>FormDlgConfigOrderInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDialog\FormDlgConfigPrintOutput.resx">
+      <DependentUpon>FormDlgConfigPrintOutput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDialog\FormDlgLogin.resx">
+      <DependentUpon>FormDlgLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDialog\FormDlgOrderDetail.resx">
+      <DependentUpon>FormDlgOrderDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDialog\FormDlgRequestDelivery.resx">
+      <DependentUpon>FormDlgRequestDelivery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDialog\FormDlgUpdate.resx">
+      <DependentUpon>FormDlgUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDialog\FormStoreInfoSelecter.resx">
+      <DependentUpon>FormStoreInfoSelecter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPopup\FormPopupNotify.resx">
+      <DependentUpon>FormPopupNotify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPopup\FormPopupProgramInfo.resx">
+      <DependentUpon>FormPopupProgramInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormView\FormViewOrderList.resx">
+      <DependentUpon>FormViewOrderList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\announcement_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up2_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\order_state_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\order_state_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\order_state_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\order_state_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\order_state_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\order_state_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\order_state_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\order_state_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\order_state_9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\order_state_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bopermission_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkbuttons_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\insertcomment_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttoxls_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zoom_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zoom_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clearfilter_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boproductgroup_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkbox_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comment_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\properties_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reset_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\selectall_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\selectall_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\showall_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\technology_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addheader_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\moa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\knowledgebasearticle_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\groupfieldcollection_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\app_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Sync_Center_99944.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Sync_Center_98003.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_exclamation-circle_yellow_69299.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Sync_Center_99944_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Sync_Center_99944_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Sync_Center_99944_128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Sync_Center_99944_b_128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Sync_Center_99944_b_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Sync_Center_99944_b_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apply_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apply_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apply_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\support_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\information_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\viewsetting_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img01.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img02.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img03.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\richeditpageorientation_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employees_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newemployee_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employees_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employeewelcome_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assigntome_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assigntome_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login_bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bike_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login_bg.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
